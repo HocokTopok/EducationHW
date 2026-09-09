@@ -1,0 +1,458 @@
+\documentclass[a4paper,12pt]{article}
+
+
+
+\usepackage[export]{adjustbox}
+
+
+
+\usepackage{amsbsy}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsopn}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{amsxtra}
+\usepackage{array}
+\usepackage{ctable}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{polyglossia}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{xcolor}
+
+
+
+\setmainlanguage{russian}
+
+\setmainfont[Script=Cyrillic, Ligatures=TeX, Scale=0.975]{CMU Sans Serif}
+
+\setmonofont{CMU Typewriter Text}
+
+\renewcommand{\arraystretch}{1.5}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\geometry{left   = 0.5cm}
+\geometry{bottom = 0.5cm}
+\geometry{right  = 0.5cm}
+\geometry{top    = 0.5cm}
+
+\parindent = 0pt
+\parskip   = 0pt
+\tolerance = 100
+
+\flushbottom
+
+\definecolor{G}{rgb}{0.00, 0.50, 0.00}
+
+\hypersetup
+{
+    linkcolor  = G,
+    urlcolor   = G,
+    colorlinks = true
+}
+
+\renewenvironment{itemize}
+{
+    \begin{list}{\labelitemi}
+    {
+      \setlength{\topsep}{0pt}
+      \setlength{\partopsep}{0pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\itemsep}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\leftmargin}{14.5pt}
+    }
+}{\end{list}}
+
+\definecolor{B}{rgb}{0.00, 0.00, 0.50}
+
+\lstset
+{
+    backgroundcolor   = \color{white},      % Установка цвета заднего плана  
+    basicstyle        = \ttfamily\color{B}, % Установка размера и цвета шрифта
+    breakatwhitespace = true,               % Установка разрывов на пробелах
+    breaklines        = true,               % Установка переноса длинных строк
+    captionpos        = none,               % Установка позиции имени листинга
+    commentstyle      = \color{B},          % Установка цвета комментариев кода
+    deletekeywords    = {},                 % Установка удаленных ключевых слов  
+    escapeinside      = {\%*}{*)},          % Установка добавления LaTeX в коде  
+    extendedchars     = false,              % Установка дополнительных символов 
+    frame             = L,                  % Установка типа рамки вокруг кода
+    framexleftmargin  = -8pt,               % Установка размера левого отступа
+    keepspaces        = true,               % Установка выравнивания пробелов
+    keywordstyle      = \color{B},          % Установка цвета ключевых слов  
+    language          = C++,                % Установка языка программирования
+    otherkeywords     = {},                 % Установка добавочных ключевых слов   
+    numbers           = none,               % Установка позиции нумерации строк
+    numbersep         = 0pt,                % Установка отступа нумерации строк
+    numberstyle       = \color{black},      % Установка цвета нумерации строк
+    showspaces        = false,              % Установка пробелов символом '_'
+    showstringspaces  = false,              % Установка пробелов символом '_'
+    showtabs          = false,              % Установка табуляторов видимыми
+    stepnumber        = 1,                  % Установка периода нумерации строк
+    stringstyle       = \color{B},          % Установка цвета строковых литералов
+    tabsize           = 2,                  % Установка размера табуляции в коде
+}
+
+
+
+\begin{document}
+
+
+
+\newpage\thispagestyle{empty}\pdfpageheight = 2.50in\enlargethispage{100in}
+
+\title{\bf Software Engineering} 
+
+\author{Developed by Associate Professor and Ph.D. \href{https://t.me/i_s_m_mipt}{Ivan Makarov}}
+
+\date{}
+
+\maketitle
+
+
+
+\newpage\thispagestyle{empty}\pdfpageheight = 6.10in\enlargethispage{100in}
+
+\renewcommand\contentsname{\Large Table of Contents}
+
+\renewcommand{\cftdotsep}{0.5}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\makeatletter
+\let\latexl@section\l@section
+\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
+\makeatother
+
+\titlelabel{}
+
+%\thispagestyle{empty}\tableofcontents\thispagestyle{empty}
+
+
+
+\newpage\thispagestyle{empty}\pdfpageheight = 25.50in\enlargethispage{100in}
+
+
+
+\section{01. Introduction and Environment}
+
+\begin{itemize}
+
+    \item \texttt{01.01} -- \texttt{01.01}\,\texttt{:}\,Introduction. Overview. The C\texttt{++} Programming Language. Programming\:Paradigms.\:Resources.
+
+    \smallskip
+
+    \item \texttt{01.02} -- \texttt{01.03}\,\texttt{:}\,Program Hello, World! Standard Template Library.
+    
+\end{itemize}
+
+\section{02. Language Core Basics}
+
+\begin{itemize}
+
+    \item \texttt{02.01} -- \texttt{02.07}\,\texttt{:}\,Declarations and Definitions. Objects, Variables and Literals. Types. Type Aliases.
+
+    \smallskip
+
+    \item \texttt{02.08} -- \texttt{02.10}\,\texttt{:}\,Initialization. Type Inference. Type Conversions.
+
+    \smallskip
+
+    \item \texttt{02.11} -- \texttt{02.25}\,\texttt{:}\,Imperative and Structured Programming. Operators, Expressions and Statements.
+
+    \smallskip
+
+    \item \texttt{02.26} -- \texttt{02.35}\,\texttt{:}\,Memory. Addresses and Pointers. Arrays. Lvalue References.
+
+    \smallskip
+
+    \item \texttt{02.36} -- \texttt{02.45}\,\texttt{:}\,Functions. Procedural Programming. Algorithms. Hybrid Sort. Binary Search. Time Complexity.
+    
+\end{itemize}
+
+\section{03. Object Oriented Programming}
+
+\begin{itemize}
+
+    \item \texttt{03.01} -- \texttt{03.06}\,\texttt{:}\,Object\,-\,Oriented Programming. Structures. Classes. Encapsulation. 
+
+    \smallskip
+
+    \item \texttt{03.07} -- \texttt{03.14}\,\texttt{:}\,Class Relations. Patterns Attorney\,-\,Client and Passkey. Class Hierarchies. Inheritance.
+
+    \smallskip
+
+    \item \texttt{03.15} -- \texttt{03.22}\,\texttt{:}\,Dynamic Polymorphism. Abstraction. RunTime Type Identification.
+
+    \smallskip
+
+    \item \texttt{03.23} -- \texttt{03.30}\,\texttt{:}\,Rvalue References. Copy and Move Semantics. Pattern Copy\,-\,and\,-\,Swap. Rules of 0,\:3,\:4\:and\:5.
+
+    \smallskip
+
+    \item \texttt{03.31} -- \texttt{03.37}\,\texttt{:}\,Operator Overloading. Three\,-\,Way Comparison.
+    
+\end{itemize}
+
+\section{04. Generic Programming}
+
+\begin{itemize}
+
+    \item \texttt{04.01} -- \texttt{04.08}\,\texttt{:}\,Generic Programming. Function and Class Templates. Template Specializations. 
+
+    \smallskip
+
+    \item \texttt{04.09} -- \texttt{04.11}\,\texttt{:}\,Variadic Templates. Variadic and Fold Expressions.
+
+    \smallskip
+
+    \item \texttt{04.12} -- \texttt{04.14}\,\texttt{:}\,Forwarding References. Perfect Forwarding. Pattern SFINAE.
+
+    \smallskip
+
+    \item \texttt{04.15} -- \texttt{04.25}\,\texttt{:}\,Variable and Type Alias\:Templates.\:Metaprogramming.\:Constant\:Expressions.\:Tuples.\:Type\:Lists.
+
+    \smallskip
+
+    \item \texttt{04.26} -- \texttt{04.40}\,\texttt{:}\,Type Traits. Metafunctions. Concepts, Constraints and Requirements.
+
+    \smallskip
+    
+\end{itemize}
+
+\section{05. Software Engineering Patterns}
+
+\begin{itemize}
+
+    \item \texttt{05.01} -- \texttt{05.03}\,\texttt{:}\,Gang Of Four Patterns. Patterns Builder, Factory and Prototype.
+
+    \smallskip
+
+    \item \texttt{05.04} -- \texttt{05.07}\,\texttt{:}\,Patterns Adapter, Bridge, Composite and Decorator.
+
+    \smallskip
+
+    \item \texttt{05.08} -- \texttt{05.12}\,\texttt{:}\,Patterns\:Memento,\:Observer,\:State,\:Strategy\,and\,Template\,Method.\,Policy\,-\,Based\,Programming.
+
+    \smallskip
+
+    \item \texttt{05.13} -- \texttt{05.20}\,\texttt{:}\,Static Polymorphism. Patterns CRTP, Mixin, Singleton, Inverted Mixin and Facade.
+    
+\end{itemize}
+
+\section{06. Projects and Libraries}
+
+\begin{itemize}
+
+    \item \texttt{06.01} -- \texttt{06.04}\,\texttt{:}\,Preprocessing. Translation Units. Preprocessor Directives. Macros.
+
+    \smallskip
+
+    \item \texttt{06.05} -- \texttt{06.11}\,\texttt{:}\,Compilation, Assembly and Linking. Header,\:Source,\:Object\:and\:Executable\:Files.\:Pattern\:Pimpl.
+
+    \smallskip
+
+    \item \texttt{06.12} -- \texttt{06.20}\,\texttt{:}\,Namespaces. Modules. Libraries. The Boost C\texttt{++} Library Collection. System CMake.
+
+    \smallskip
+    
+\end{itemize}
+
+\section{07. Debugging and Profiling Tools}
+
+\begin{itemize}
+
+    \item \texttt{07.01} -- \texttt{07.09}\,\texttt{:}\,Error Handling. Error Codes. Enumerations. Unions. Pattern Visitor.
+
+    \smallskip
+
+    \item \texttt{07.10} -- \texttt{07.12}\,\texttt{:}\,Exceptions. Exception Safety Guarantees.
+
+    \smallskip
+
+    \item \texttt{07.13} -- \texttt{07.23}\,\texttt{:}\,Development\:Tools.\:Backtracing,\:Debugging,\,Profiling,\,Logging,\,Testing\,and\,Microbenchmarking.
+    
+\end{itemize}
+
+\section{08. Applied Computations}
+
+\begin{itemize}
+
+    \item \texttt{08.01} -- \texttt{08.09}\,\texttt{:}\,Bits and Bytes. Branchless Programming. Reflected Binary Gray Code. Bit Fields. 
+
+    \smallskip
+
+    \item \texttt{08.10} -- \texttt{08.18}\,\texttt{:}\,Long Arithmetic. Karatsuba Fast Multiplication. Embedding Python.
+
+    \smallskip
+
+    \item \texttt{08.19} -- \texttt{08.23}\,\texttt{:}\,Floating\,-\,Point Numbers. Numerical Methods. Complex Numbers. Fast Fourier Transformation.
+
+    \smallskip
+
+    \item \texttt{08.24} -- \texttt{08.27}\,\texttt{:}\,Random Numbers. Monte\,-\,Carlo Methods.
+
+    \smallskip
+
+    \item \texttt{08.28} -- \texttt{08.38}\,\texttt{:}\,Clocks, Durations and Time Points. Timing. Calendars.
+    
+\end{itemize}
+
+\section{09. Memory Management}
+
+\begin{itemize}
+
+    \item \texttt{09.01} -- \texttt{09.17}\,\texttt{:}\,Pattern RAII. Smart Pointers. Pattern Mediator. Iterators. Pattern Iterator.
+
+    \smallskip
+
+    \item \texttt{09.18} -- \texttt{09.26}\,\texttt{:}\,Memory. Memory Segments. Data Alignment. Error Handling. Uninitialized Memory. Optionals.
+
+    \smallskip
+
+    \item \texttt{09.27} -- \texttt{09.36}\,\texttt{:}\,Allocators. Polymorphic Memory Resources.
+    
+\end{itemize}
+
+\section{10. Programming with Containers}
+
+\begin{itemize}
+
+    \item \texttt{10.01} -- \texttt{10.21}\,\texttt{:}\,Sequential\:Containers.\:Pattern\:Proxy.\,Container\,Adapters.\,Heaps.\,Ring\,Buffers.\,Pattern\,Flyweight.
+
+    \smallskip
+
+    \item \texttt{10.22} -- \texttt{10.30}\,\texttt{:}\,Nested and Multidimensional Containers. Dynamic Programming.
+
+    \smallskip
+
+    \item \texttt{10.31} -- \texttt{10.33}\,\texttt{:}\,Linear Algebra. Matrices. Strassen Fast Multiplication. Decomposition Methods.
+
+    \smallskip
+
+    \item \texttt{10.34} -- \texttt{10.39}\,\texttt{:}\,Balanced Binary Search Trees. Ordered Containers.
+
+    \smallskip
+
+    \item \texttt{10.40} -- \texttt{10.46}\,\texttt{:}\,Hash Functions. Hash Tables. Unordered Containers. Multiple Interfaces.
+    
+\end{itemize}
+
+\section{11. Programming with Algorithms}
+
+\begin{itemize}
+
+    \item \texttt{11.01} -- \texttt{11.11}\,\texttt{:}\,Functors and Predicates. Lambda Expressions. Event\,-\,Driven Programming. Pattern\:Command.
+
+    \smallskip
+
+    \item \texttt{11.12} -- \texttt{11.15}\,\texttt{:}\,Pattern Visitor. Double Dispatching. Variants.
+
+    \smallskip
+
+    \item \texttt{11.16} -- \texttt{11.28}\,\texttt{:}\,Ranges. Algorithms. Iterator and Function Adapters. Views.
+
+    \smallskip
+
+    \item \texttt{11.29} -- \texttt{11.32}\,\texttt{:}\,Graphs. Breadth First Search. Depth First Search. Visitors. Dijkstra Shortest Paths.
+    
+\end{itemize}
+
+\section{12. Text Data Processing}
+
+\begin{itemize}
+
+    \item \texttt{12.01} -- \texttt{12.12}\,\texttt{:}\,Locales and Facets. Encodings. Standard Unicode. Encoding Conversions. Strings. String Views.
+
+    \smallskip
+
+    \item \texttt{12.13} -- \texttt{12.26}\,\texttt{:}\,Regular Expressions. Grammars. Pattern Interpreter. Parsers.
+    
+\end{itemize}
+
+\section{13. Input and Output Subsystems}
+
+\begin{itemize}
+
+    \item \texttt{13.01} -- \texttt{13.15}\,\texttt{:}\,Streams. Flags. Manipulators. Stream Synchronization. Stream Buffers. Iterators.
+
+    \smallskip
+
+    \item \texttt{13.16} -- \texttt{13.23}\,\texttt{:}\,Filesystem. Serialization. Relational Databases. Embedding Postgres. Declarative Programming.
+    
+\end{itemize}
+
+\section{14. Parallel Programming}
+
+\begin{itemize}
+
+    \item \texttt{14.01} -- \texttt{14.09}\,\texttt{:}\,Parallel Programming. Concurrency. Multitasking. Threads.
+
+    \smallskip
+
+    \item \texttt{14.10} -- \texttt{14.14}\,\texttt{:}\,Asynchronous Programming. Futures.\:Packaged\:Tasks.\:Promises.\:Algorithms.\:Execution\:Policies.
+
+    \smallskip
+
+    \item \texttt{14.15} -- \texttt{14.27}\,\texttt{:}\,Synchronization. Mutexes, Condition Variables, Semaphores, Latches and Barriers.
+
+    \smallskip
+
+    \item \texttt{14.28} -- \texttt{14.33}\,\texttt{:}\,Architectures. Processors, Chiplets and Cores.
+
+    \smallskip
+
+    \item \texttt{14.34} -- \texttt{14.35}\,\texttt{:}\,Execution Pipelines. Instructions. Memory Management Unit. Memory Hierarchy. Caches.
+
+    \smallskip
+
+    \item \texttt{14.36} -- \texttt{14.46}\,\texttt{:}\,Atomics. Cache Lines. Memory Ordering. Spinlocks. 
+
+    \smallskip
+
+    \item \texttt{14.47} -- \texttt{14.52}\,\texttt{:}\,Lockfree Programming. Lockfree Stacks and Queues. Thread Pools.
+
+    \smallskip
+
+    \item \texttt{14.53} -- \texttt{14.60}\,\texttt{:}\,Processes. Standard POSIX. Inter\,-\,Process Communications. Shared Memory. Synchronization.
+    
+\end{itemize}
+
+\section{15. Distributed Network Systems}
+
+\begin{itemize}
+
+    \item \texttt{15.01} -- \texttt{15.07}\,\texttt{:}\,Networks. Switches and Routers. Addresses. Standards. Protocols.
+
+    \smallskip
+
+    \item \texttt{15.08} -- \texttt{15.11}\,\texttt{:}\,Servers. Ports.  Sockets. Synchronous Clients. Standard\:POSIX.\:Protocols\:Ethernet,\:IP\:and\:TCP.
+
+    \smallskip
+
+    \item \texttt{15.12} -- \texttt{15.16}\,\texttt{:}\,Asynchronous Clients. Pattern Chain of Responsibility. Coroutines.
+
+    \smallskip
+
+    \item \texttt{15.17} -- \texttt{15.19}\,\texttt{:}\,Domain Name System. Protocols HTTP and Websocket.
+
+    \smallskip
+
+    \item \texttt{15.20} -- \texttt{15.25}\,\texttt{:}\,Hardware Extensions. Intrinsics. Cryptography. Standard AES. Protocol TLS.
+    
+\end{itemize}
+
+
+
+\end{document}
